@@ -1,0 +1,245 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+body{
+    font-family: "Robotot",sans-serif;
+    background: #4F3E6A;
+}
+nav{
+    background: white ;
+    padding: 5px 20px;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    color: #4F3E6A;
+    text-decoration: none;
+}
+.menu li{
+    font-size: 16px;
+    padding: 15px 5px;
+}
+.menu li a{
+    display: block;
+}
+.logo img{
+    height: 50px;
+    width: 35%;
+    justify-self: start;
+    align-self: center;
+    margin-left: 20px;
+}
+.button.secondary{
+    border-bottom: 1px #4F3E6A solid;
+}
+
+/*Menu mobile*/
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.toggle{
+    order: 1;
+}
+.item.button{
+    order:2;
+}
+.item{
+    width: 100%;
+    text-align: center;
+    order: 3;
+    display: none;
+}
+.item.active{
+    display: block;
+}
+.toggle{
+    cursor: pointer;
+}
+.logo img{
+    justify-self: start;
+    padding-right: 200px;
+}
+.bars{
+    background: rgb(212, 174, 235);
+    display: inline-block;
+    height: 2px;
+    position:relative;
+    width: 18px;
+}
+.bars::before,.bars::after{
+    background: rgb(212, 174, 235);
+    content: "";
+    display: inline-block;
+    height: 2px;
+    position:absolute;
+    width: 18px;  
+}
+.bars::before{
+    top: 5px;
+}
+.bars::after{
+    top: -5px;
+}
+
+/*Menu Tablet*/
+@media all and (min-width:468px){
+    .menu{
+        justify-content: center;
+    }
+    .logo{
+        flex:1;
+    }
+    .item.button{
+        width:auto;
+        order:1;
+        display: block;
+    }
+    .toggle{
+        order: 2;
+    }
+    .button.secondary{
+        border:0;
+    }
+    .button a{
+        padding: 7px 15px;
+        text-decoration: none;
+        color: white;
+        background: #4F3E6A;
+        border: 1px solid #4F3E6A ;
+        border-radius: 50em;
+    }
+    .button.secondary a{
+        background: transparent;
+        color: #4F3E6A;
+    }
+    .button a:hover{
+        transition: all .25s;
+    }
+    .button:not(.secondary) a:hover{
+        background: #523a79;
+        border-color: #523a79;
+    }
+    .button.secondary a:hover{
+        background: #4F3E6A;
+        color: white;
+    }
+}
+
+/*Menu Desktop*/
+@media all and (min-width: 768px){
+
+    .item{
+        display: block;
+        width: auto;
+    }
+    .toggle{
+        display: none;
+    }
+    .logo{
+       
+		
+            max-height: 70%;
+        
+    }
+    .item {
+        order: 1;
+    }
+    .button {
+        order: 2;
+    }
+    .menu li {
+        padding: 15px 10px;
+    }
+    .menu li.button {
+        padding-right: 0;
+    }
+}
+
+/*Conteudo Principal*/
+.app-img{
+    width: 50%;
+    float: left;
+}
+.app-img img{
+    padding-left: 25%;
+    padding-top: 10%;
+    height: auto;
+    width: 100%;
+    transition: all 0.3s ease-in-out 0s;
+}
+.app-img img:hover{
+    transform: rotate(-3deg);
+    transition: all 0.3s ease-in-out 0s;
+}
+.btn-toolbar{
+    width: 40%;
+    float: left;
+    padding-left: 80px;
+}
+.btn-toolbar button{
+    position: auto;
+    padding: 20px 70px;
+    border: 4px solid #F0844D ;
+    background-color: #F0844D; 
+    border-radius: 10px;
+    color: white; 
+    cursor: pointer;
+    display: block;
+    margin: 20px;
+  }
+  
+.btn-toolbar button:not(:last-child) {
+    border-bottom: none;
+}
+.btn-toolbar button:hover {
+    background-color: #fc6215;
+    border: 4px solid #fc6215;
+}
+.banner{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer{
+    background: white;
+    padding: 10px 0;
+}
+
+.footer-container{
+    max-width: 1500px;
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+}
+.logo-ft{
+    width: 180px;
+}
+.social-media{
+    margin: 15px 0;
+    padding: 3px;
+}
+
+.social-media a{
+    color: #4F3E6A;
+    margin-left: 25px;
+    height: auto;
+}
+.header {
+    overflow: hidden;
+    background-color: white;
+    padding: 0 30px;
+    max-height: max-content;
+    box-sizing: border-box;
+    max-height: 60%;
+    border-radius: 5px;
+}
